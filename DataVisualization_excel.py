@@ -47,6 +47,8 @@ print(monthly_revenue)
 print(monthly_revenue.index)
 print(monthly_revenue.values)
 print(type(monthly_revenue))
+
+
 #Create matplotlib
 # matplotlib  -->  seaborn,pandas plot
 
@@ -58,32 +60,32 @@ plt.figure(figsize=(16,8))
 
 print(plt.style.available)
 
-# plt.plot(monthly_revenue.index,monthly_revenue.values,marker ='o') #o means circle
-# plt.xlabel("Year - Months")
-# plt.ylabel("Revenue")
-# plt.title('Revenue in Months')
-# plt.xticks(rotation =45) # x-axis label rotation
-# plt.grid(True) # it will show grid lines in diagram
-# plt.style.use('classic') #use different styles of graphs
-# plt.savefig("Images\MonthlyRevenue1.png",dpi=300)
-# plt.show()
+plt.plot(monthly_revenue.index,monthly_revenue.values,marker ='o') #o means circle
+plt.xlabel("Year - Months")
+plt.ylabel("Revenue")
+plt.title('Revenue in Months')
+plt.xticks(rotation =45) # x-axis label rotation
+plt.grid(True) # it will show grid lines in diagram
+plt.style.use('classic') #use different styles of graphs
+plt.savefig("Images\MonthlyRevenue1.png",dpi=300)
+plt.show()
 
 
 ################################################################################
 
 
-# plt.plot(monthly_revenue.index,monthly_revenue.values,marker ='o') #o means circle
+plt.plot(monthly_revenue.index,monthly_revenue.values,marker ='o') #o means circle
 
-# for i,value in enumerate(monthly_revenue):
-#     plt.text(monthly_revenue.index[i],value,f"{int(value):,}",ha='center',fontsize=8)
-# plt.xlabel("Year - Months")
-# plt.ylabel("Revenue")
-# plt.title('Revenue in Months')
-# plt.xticks(rotation =45) # x-axis label rotation
-# plt.grid(False) # it dont show grid lines in diagram
-# plt.style.use('ggplot') #use different styles of graphs
-# plt.savefig("Images\MonthlyRevenue_ggplotstyle.png",dpi=300)
-# plt.show()
+for i,value in enumerate(monthly_revenue):
+    plt.text(monthly_revenue.index[i],value,f"{int(value):,}",ha='center',fontsize=8)
+plt.xlabel("Year - Months")
+plt.ylabel("Revenue")
+plt.title('Revenue in Months')
+plt.xticks(rotation =45) # x-axis label rotation
+plt.grid(False) # it dont show grid lines in diagram
+plt.style.use('ggplot') #use different styles of graphs
+plt.savefig("Images\MonthlyRevenue_ggplotstyle.png",dpi=300)
+plt.show()
 
 
 #################################################################################
